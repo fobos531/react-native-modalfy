@@ -206,17 +206,20 @@ const styles = StyleSheet.create({
   container: {
     ...Platform.select({
       android: {
-        ...StyleSheet.absoluteFillObject,
+        //@ts-expect-error
+        ...StyleSheet.absoluteFill,
         zIndex: 0,
       },
       ios: {
-        ...StyleSheet.absoluteFillObject,
+        //@ts-expect-error
+        ...StyleSheet.absoluteFill,
         zIndex: 0,
       },
     }),
   },
   containerWeb: {
-    ...StyleSheet.absoluteFillObject,
+    //@ts-expect-error
+    ...StyleSheet.absoluteFill,
     overflow: 'hidden',
     height: '100vh',
     width: '100vw',
@@ -226,7 +229,8 @@ const styles = StyleSheet.create({
     maxWidth: '-webkit-fill-available',
   },
   backdrop: {
-    ...StyleSheet.absoluteFillObject,
+    //@ts-expect-error
+    ...StyleSheet.absoluteFill,
   },
 })
 

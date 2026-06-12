@@ -399,7 +399,8 @@ ${stackItem.name}: {
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
+    //@ts-expect-error
+    ...StyleSheet.absoluteFill,
     alignItems: 'center',
     backgroundColor: 'transparent',
   },
